@@ -1,8 +1,8 @@
-query firstFimeOrgMemebers($login: String!) {
+query firstFimeOrgMemebers($login: String!, $n: Int!) {
   organization(login: $login) {
     id
     name
-    membersWithRole(first: 5) {
+    membersWithRole(first: $n) {
       edges {
         node {
           id
@@ -16,5 +16,6 @@ query firstFimeOrgMemebers($login: String!) {
 
 # query variables
 #{
-#  "login": "google"
+#  "login": "google",
+#  "n": 5
 #}

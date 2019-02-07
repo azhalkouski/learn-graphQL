@@ -1,0 +1,20 @@
+query firstFimeOrgMemebers($login: String!) {
+  organization(login: $login) {
+    id
+    name
+    membersWithRole(first: 5) {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+}
+
+
+# query variables
+#{
+#  "login": "google"
+#}

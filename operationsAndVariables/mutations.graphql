@@ -1,0 +1,37 @@
+# Mutations are similar to PUT or DELETE in REST
+# You send data as a payload in a mutation
+# GraphQL changes the dataset behind the schema
+# API defines which mutations are allowed
+
+mutation newComment($input: AddCommentInput!) {
+  addComment(input: $input) {
+    clientMutationId
+    subject {
+      id
+    }
+  }
+}
+
+{
+  repositoryOwner(login: "azhalkouski") {
+    repository(name: "learn-graphQL") {
+      issues(first: 1) {
+        edges {
+          node {
+            id
+            title
+            body
+            comments(first: 5) {
+              edges {
+                node {
+                  id
+                  body
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

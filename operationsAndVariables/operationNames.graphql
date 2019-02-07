@@ -1,0 +1,14 @@
+query firstFimeOrgMemebers {
+  organization(login: "facebook") {
+    id
+    name
+    membersWithRole(first: 5) {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+}

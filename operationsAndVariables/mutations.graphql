@@ -35,3 +35,12 @@ mutation newComment($input: AddCommentInput!) {
     }
   }
 }
+
+# query variables
+#{
+#  "input": {
+#    "clientMutationId": "23432",
+#    "subjectId": "MDU6SXNzdWU0MDc2ODAxMTc=",
+#    "body": "By the way, that comment was added using GitHub GraphQL API!"
+#  }
+#}

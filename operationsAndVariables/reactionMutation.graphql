@@ -1,0 +1,39 @@
+mutation newReaction($input: AddReactionInput!) {
+  addReaction(input: $input) {
+    reaction {
+      content
+    }
+  }
+}
+# {
+#   repositoryOwner(login: "azhalkouski") {
+#     repository(name: "learn-graphQL") {
+#       issues(first: 1) {
+#         edges {
+#           node {
+#             id
+#             title
+#             body
+#             comments(first: 5) {
+#               edges {
+#                 node {
+#                   id
+#                   body
+#                 }
+#               }
+#             }
+#           }
+#         }
+#       }
+#     }
+#   }
+# }
+
+# query variables
+#{
+#  "input": {
+#    "clientMutationId": "23432",
+#    "subjectId": "MDEyOklzc3VlQ29tbWVudDQ2MTQwNzE3OQ==",
+#    "content": "HOORAY"
+#  }
+#}
